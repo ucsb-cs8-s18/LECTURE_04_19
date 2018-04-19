@@ -19,6 +19,11 @@ def theLongerOne(animal_A,animal_B):
 def test_theLongerOne_1():
     assert theLongerOne("mouse","cat")=="mouse"
 
+##    assert theLongerOne("mouse","cat")=="mouse" (a)
+##           theLongerOne("mouse","cat")=="mouse" (b)
+##           theLongerOne("mouse","cat")          (c)
+##                        "mouse","cat"           (d)
+           
 def test_theLongerOne_2():
     assert theLongerOne("mouse","chicken")=="chicken"
 

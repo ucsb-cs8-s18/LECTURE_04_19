@@ -1,0 +1,266 @@
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 03:03:55) 
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+======== RESTART: /Users/pconrad/github/LECTURE_04_19/functionDefs.py ========
+>>> f(3)
+9
+>>> longerString("cow","chicken")
+'chicken'
+>>> longerString("duck","pig")
+'duck'
+>>> longerString("UCSB",longerString("Cal Poly","Stanford"))
+'Cal Poly'
+>>> school1="UC San Diego"
+>>> school2="UC Davis"
+>>> longerString(school1,school2)
+'UC San Diego'
+>>> a="UC San Diego"
+>>> b="UC Davis"
+>>> 
+============= RESTART: /Users/pconrad/Documents/slightlyFixed.py =============
+>>> theLongerOne("cat","dog")
+'cat'
+>>> theLongerOne("cat","chicken")
+'cat'
+>>> theLongerOne("chicken","dog")
+'chicken'
+>>> theLongerOne("chicken","duck-billed platypus")
+'chicken'
+>>> len(1234)
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    len(1234)
+TypeError: object of type 'int' has no len()
+>>> 
+============= RESTART: /Users/pconrad/Documents/slightlyFixed.py =============
+>>> theLongerOne("cat","chicken")
+'chicken'
+>>> theLongerOne("chicken","duck-billed platypus")
+'duck-billed platypus'
+>>> theLongerOne("chicken","dog")
+'chicken'
+>>> theLongerOne("cat","dog")
+'cat'
+>>> 
+>>> 
+>>> 
+>>> animal="dog"  # Assignment statement says
+>>>               # Take thing on right, make name on left refer to it
+>>> 
+>>> animal=="cat"
+False
+>>> animal=="dog"
+True
+>>> age = 18   # assignment
+>>> age >= 21
+False
+>>> age < 21
+True
+>>> # True and False things are boolean expressions
+>>> animal < "pig"
+True
+>>> animal > "zebra"
+False
+>>> animal
+'dog'
+>>> 'zebra' > 'dog'
+True
+>>> 'Obama' > 'Bush'
+True
+>>> 'Barack' > 'George'
+False
+>>> 'Dog' > 'zebra'
+False
+>>> 'dog' > 'Zebra'
+True
+>>> ord('D')
+68
+>>> ord('A')
+65
+>>> ord('d')
+100
+>>> ord('z')
+122
+>>> 'dog' > 'Zebra'
+True
+>>> ord('d')
+100
+>>> ord('Z')
+90
+>>> mountain='山'
+>>> mountain
+'山'
+>>> person='人'
+>>> ord('人')
+20154
+>>> ord('山')
+23665
+>>> mountain
+'山'
+>>> person
+'人'
+>>> mountain > person
+True
+>>> mountain == "dog"
+False
+>>> mountain == '山'
+True
+>>> x = 5
+>>> y = 6
+>>> x + y
+11
+>>> mountain
+'山'
+>>> person
+'人'
+>>> mountain + person
+'山人'
+>>> animal1
+Traceback (most recent call last):
+  File "<pyshell#61>", line 1, in <module>
+    animal1
+NameError: name 'animal1' is not defined
+>>> animal1="dog"
+>>> animal2="cat"
+>>> animal2+animal1
+'catdog'
+>>> schools=["UCSB","UCSD","Stanford","Cal Poly"]
+>>> schools[-1]
+'Cal Poly'
+>>> schools[-1][0]
+'C'
+>>> for i in range(len(schools)):
+	print(schools[i])
+
+	
+UCSB
+UCSD
+Stanford
+Cal Poly
+>>> for i in schools:
+	print(i)
+
+	
+UCSB
+UCSD
+Stanford
+Cal Poly
+>>>  for school in schools:
+	print(school)
+	
+SyntaxError: unexpected indent
+>>> for school in schools:
+	print(school)
+
+	
+UCSB
+UCSD
+Stanford
+Cal Poly
+>>> for s in schools:
+	print(s)
+
+	
+UCSB
+UCSD
+Stanford
+Cal Poly
+>>> for s in schools:
+	print(schools)
+
+	
+['UCSB', 'UCSD', 'Stanford', 'Cal Poly']
+['UCSB', 'UCSD', 'Stanford', 'Cal Poly']
+['UCSB', 'UCSD', 'Stanford', 'Cal Poly']
+['UCSB', 'UCSD', 'Stanford', 'Cal Poly']
+>>> for team1 in schools:
+	for team2 in schools:
+		print(team1," vs. ",team2)
+
+		
+UCSB  vs.  UCSB
+UCSB  vs.  UCSD
+UCSB  vs.  Stanford
+UCSB  vs.  Cal Poly
+UCSD  vs.  UCSB
+UCSD  vs.  UCSD
+UCSD  vs.  Stanford
+UCSD  vs.  Cal Poly
+Stanford  vs.  UCSB
+Stanford  vs.  UCSD
+Stanford  vs.  Stanford
+Stanford  vs.  Cal Poly
+Cal Poly  vs.  UCSB
+Cal Poly  vs.  UCSD
+Cal Poly  vs.  Stanford
+Cal Poly  vs.  Cal Poly
+>>> for team1 in schools:
+	for team2 in schools:
+		print(team1," vs. ",team2)
+	print("")
+
+	
+UCSB  vs.  UCSB
+UCSB  vs.  UCSD
+UCSB  vs.  Stanford
+UCSB  vs.  Cal Poly
+
+UCSD  vs.  UCSB
+UCSD  vs.  UCSD
+UCSD  vs.  Stanford
+UCSD  vs.  Cal Poly
+
+Stanford  vs.  UCSB
+Stanford  vs.  UCSD
+Stanford  vs.  Stanford
+Stanford  vs.  Cal Poly
+
+Cal Poly  vs.  UCSB
+Cal Poly  vs.  UCSD
+Cal Poly  vs.  Stanford
+Cal Poly  vs.  Cal Poly
+
+>>> 
+========= RESTART: /Users/pconrad/github/LECTURE_04_19/tournament.py =========
+UCSB  vs.  UCSD
+UCSB  vs.  Stanford
+UCSB  vs.  Cal Poly
+
+UCSD  vs.  UCSB
+UCSD  vs.  Stanford
+UCSD  vs.  Cal Poly
+
+Stanford  vs.  UCSB
+Stanford  vs.  UCSD
+Stanford  vs.  Cal Poly
+
+Cal Poly  vs.  UCSB
+Cal Poly  vs.  UCSD
+Cal Poly  vs.  Stanford
+
+>>> 
+========= RESTART: /Users/pconrad/github/LECTURE_04_19/tournament.py =========
+UCSB  vs.  UCSB
+UCSD  vs.  UCSD
+Stanford  vs.  Stanford
+Cal Poly  vs.  Cal Poly
+
+UCSB  vs.  UCSB
+UCSD  vs.  UCSD
+Stanford  vs.  Stanford
+Cal Poly  vs.  Cal Poly
+
+UCSB  vs.  UCSB
+UCSD  vs.  UCSD
+Stanford  vs.  Stanford
+Cal Poly  vs.  Cal Poly
+
+UCSB  vs.  UCSB
+UCSD  vs.  UCSD
+Stanford  vs.  Stanford
+Cal Poly  vs.  Cal Poly
+
+>>> "cat" > "dog"
+False
+>>> "cat" < "Dog"
